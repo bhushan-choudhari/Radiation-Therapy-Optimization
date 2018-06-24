@@ -1,5 +1,5 @@
 # Radiation-Therapy-Optimization
-###hematical Model to optimize beam intensity levels for treatment of cancer
+## Mathematical Model to optimize beam intensity levels for treatment of cancer
  All input files are located in the folder necessary project files
  Programming is done in AMPL and visualization is done in MAPLE software
  Place .mod,.dat and .run files in ampl 
