@@ -1,0 +1,12 @@
+param num_matrices := 126; # Number of matrices in the data file to be read
+param num_rows := 60;     # Number of rows
+param num_cols := 80;     # Number of columns 
+
+# Read from beam_raw.txt,tumor_raw.txt and critical_raw.txt to fill matrix_value. Note that the order 
+# of the index variables matter; here one matrix is filled at a time, 
+# where for each row, the corresponding column values are assigned.
+
+read {m in MATS, i in ROWS, j in COLUMNS} target_value[m,i,j] < beam_raw.txt;
+read { i in ROWS, j in COLUMNS} tumor [i,j] < tumor_raw.txt;
+read { i in ROWS, j in COLUMNS} critical [i,j] < critical_raw.txt;
+

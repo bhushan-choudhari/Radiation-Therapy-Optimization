@@ -1,0 +1,13 @@
+reset;
+model q2.mod;
+option solver cplex;
+data q2.dat;
+
+solve;
+
+#display the solutions
+display X;
+display dosage;
+
+#print the output matrix
+print {m in ROWS} :{n in COLUMNS}   sum {i in MATS} X[i] * target_value[i,m,n] > q2.out;
